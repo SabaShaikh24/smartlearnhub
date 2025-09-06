@@ -1,0 +1,123 @@
+{
+  "BSc CS": {
+    "Sem 1": [
+      { "id": 1, "name": "Computer Organization and Design", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Programming with Python I", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 3, "name": "Free and Open-source Software", "credits": 2, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Database System", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { 
+        "id": 5,  
+        "name": "Discrete Mathematics",
+        "credits": 4,
+        "type": "Core",
+        "mode": "Theory",
+        "notes": [
+          { "title": "Stacks Notes", "uploader": "Alice", "date": "2025-08-18","topic": "Data Structures","link": "#" },
+          { "title": "Graphs Notes", "uploader": "Bob", "date": "2025-08-19", "link": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" }
+        ]
+      },
+      { "id": 6, "name": "Descriptive Statistics & Introduction", "credits": 2, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 7, "name": "Soft Skills Development", "credits": 2, "type": "Ability Enhancement", "mode": "Theory", "notes": [] }
+    ],
+    "Sem 2": [
+      { "id": 1, "name": "Programming with C", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Green Technologies", "credits": 2, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 3, "name": "Data Structures", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 4, "name": "Calculus", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 5, "name": "Programming with Python II", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 6, "name": "Statistical Methods and Testing of Hypothesis", "credits": 2, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 7, "name": "Linux", "credits": 2, "type": "Core", "mode": "Theory + Practical", "notes": [] }
+    ],
+    "Sem 3": [
+      { "id": 1, "name": "Operating System", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Combinatorics and Graph Theory", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 3, "name": "Web Programming (Skill Enhancement)", "credits": 4, "type": "Skill Enhancement", "mode": "Theory + Practical", "notes": [] },
+      { "id": 4, "name": "Database Management Systems", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 5, "name": "Core JAVA", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 6, "name": "Theory of Computation", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 7, "name": "Physical Computing and IoT Programming", "credits": 2, "type": "Core", "mode": "Practical", "notes": [] }
+    ],
+    "Sem 4": [
+      { "id": 1, "name": "Computer Networks", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Linear Algebra using Python", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 3, "name": "Android Developer Fundamentals", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 4, "name": "Advanced Java", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 5, "name": ".NET Technology", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 6, "name": "Fundamentals of Algorithms", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 7, "name": "Software Engineering", "credits": 4, "type": "Core", "mode": "Theory", "notes": [{
+    "title": "Intro to Data Structures",
+    "uploader": "Prof. Sharma",
+    "date": "2024-08-10",
+    "link": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+  },
+  {
+    "title": "Graph Algorithms Notes",
+    "uploader": "Student Council",
+    "date": "2024-09-02",
+    "link": "https://www.youtube.com/watch?v=8hly31xKli0"
+  }] }
+    ],
+    "Sem 5": [
+      { "id": 1, "name": "Software Testing & Quality Assurance", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Web Services", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 3, "name": "Artificial Intelligence", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Information & Network Security", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 5, "name": "Linux Server Administration", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 6, "name": "Architecture of IoT", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 7, "name": "Game Programming", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] }
+    ],
+    "Sem 6": [
+      { "id": 1, "name": "Wireless Sensor Networks & Mobile Communication", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 2, "name": "Information Retrieval", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 3, "name": "Ethical Hacking", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Digital Image Processing", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 5, "name": "Data Science", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 6, "name": "Cloud Computing", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] }
+    ]
+  },
+  "BSc IT": {
+    "Sem 1": [
+      { "id": 1, "name": "Imperative Programming", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Digital Electronics", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 3, "name": "Operating Systems", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Discrete Mathematics", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 5, "name": "Communication Skills", "credits": 2, "type": "Ability Enhancement", "mode": "Theory", "notes": [] }
+    ],
+    "Sem 2": [
+      { "id": 1, "name": "Object-Oriented Programming", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Microprocessor Architecture", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 3, "name": "Web Programming", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 4, "name": "Numerical and Statistical Methods", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 5, "name": "Green Computing", "credits": 2, "type": "Core", "mode": "Theory", "notes": [] }
+    ],
+    "Sem 3": [
+      { "id": 1, "name": "Python Programming", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Data Structures", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [ { "title": "Stacks Notes", "uploader": "Alice", "date": "2025-08-18", "link": "#" },
+    { "title": "Graphs Notes", "uploader": "Bob", "date": "2025-08-19", "link": "#" }] },
+      { "id": 3, "name": "Computer Networks", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Database Management Systems", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 5, "name": "Applied Mathematics", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] }
+    ],
+    "Sem 4": [
+      { "id": 1, "name": "Core Java", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Introduction to Embedded Systems", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 3, "name": "Computer-Oriented Statistical Techniques", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Software Engineering", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 5, "name": "Computer Graphics and Animation", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] }
+    ],
+    "Sem 5": [
+      { "id": 1, "name": "Internet of Things", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 2, "name": "Software Project Management", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 3, "name": "Artificial Intelligence", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Enterprise Java", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 5, "name": "Advanced Web Programming", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] }
+    ],
+    "Sem 6": [
+      { "id": 1, "name": "Business Intelligence", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 2, "name": "IT Service Management", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 3, "name": "Principles of GIS", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] },
+      { "id": 4, "name": "Software Quality Assurance", "credits": 4, "type": "Core", "mode": "Theory + Practical", "notes": [] },
+      { "id": 5, "name": "Security in Computing", "credits": 4, "type": "Core", "mode": "Theory", "notes": [] }
+    ]
+  }
+}

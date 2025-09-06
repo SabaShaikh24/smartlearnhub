@@ -1,0 +1,16 @@
+
+@import "tailwindcss";
+
+
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+h1:focus, h2:focus, p:focus {
+  caret-color: transparent;
+}
