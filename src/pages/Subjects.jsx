@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react"; 
 import { useSearchParams, Link } from "react-router-dom";
-import { BookmarksContext } from "../context/BookmarksContext";
+import { BookmarksContext } from "../Context/BookmarksContext";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import axios from "axios";
