@@ -7,6 +7,7 @@ const router = Router();
 router.get("/", async (req, res) => {
   try {
     const degrees = await Degree.find();
+    console.log("Degrees:", degrees);
     res.status(200).json({ degrees });
   } catch (err) {
     console.error("Error fetching degrees:", err);
