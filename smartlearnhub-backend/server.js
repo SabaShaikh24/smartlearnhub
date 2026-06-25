@@ -55,13 +55,13 @@ app.get("/api/test", (req, res) => res.json({ message: "API is working!" }));
 
 app.get("/", (req, res) => res.send("Backend is running"));
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '../client/dist')));
   
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
-  });
-}
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+//   });
+// }
 
 
 mongoose.connect(process.env.MONGO_URI)
