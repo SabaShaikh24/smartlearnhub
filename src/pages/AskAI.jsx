@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { Send, Heart, ImageIcon, X } from "lucide-react";
+import { Send, ImageIcon, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function AskAI() {
@@ -11,7 +11,6 @@ export default function AskAI() {
     {
       sender: "ai",
       text: "👋 Hi! I'm your AI assistant. Ask me anything about your notes or upload an image!",
-      favorite: false,
     },
   ]);
   const [input, setInput] = useState("");
@@ -19,7 +18,7 @@ export default function AskAI() {
   const [imagePreview, setImagePreview] = useState(null);
   const messagesEndRef = useRef(null);
   const fileInputRef = useRef(null);
-  
+
   const handleSend = async (e) => {
     e.preventDefault();
     if (!input.trim() && !selectedImage) return;
@@ -27,8 +26,7 @@ export default function AskAI() {
     const userMessage = { 
       sender: "user", 
       text: input,
-      image: selectedImage,
-      favorite: false 
+      image: selectedImage
     };
     
     setMessages((prev) => [...prev, userMessage]);
@@ -51,14 +49,12 @@ export default function AskAI() {
       const aiMessage = {
         sender: "ai",
         text: data.reply,
-        favorite: false,
       };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error) {
       const aiMessage = {
         sender: "ai",
         text: "Sorry, I couldn't connect to the AI service.",
-        favorite: false,
       };
       setMessages((prev) => [...prev, aiMessage]);
     } finally {
@@ -88,21 +84,6 @@ export default function AskAI() {
     }
   };
 
-  const toggleFavorite = (index) => {
-    setMessages((prev) => {
-      const updated = prev.map((msg, i) =>
-        i === index ? { ...msg, favorite: !msg.favorite } : msg
-      );
-
-      const aiFavorites = updated.filter(
-        (msg) => msg.sender === "ai" && msg.favorite
-      );
-      localStorage.setItem("favorites", JSON.stringify(aiFavorites));
-
-      return updated;
-    });
-  };
-
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({
       behavior: "smooth",
@@ -120,17 +101,10 @@ export default function AskAI() {
       >
         <div className="text-2xl font-bold text-white">💬 Ask AI</div>
         <div className="flex justify-end mt-2">
-          <Link
-            to="/favorites"
-            className="text-sm font-semibold text-purple-100 hover:text-white transition flex items-center"
-          >
-            ⭐ Favorites
-          </Link>
           <button 
            onClick={() => setMessages([{
            sender: "ai",
            text: "👋 Hi! I'm your AI assistant...",
-           favorite: false
            }])}
          className="text-sm font-semibold text-[#b6517a] hover:text-white transition ml-4"
         >
@@ -175,24 +149,6 @@ export default function AskAI() {
                   )}
                   <p className="text-sm">{msg.text}</p>
                 </div>
-                
-                {msg.sender === "ai" && (
-                  <div className="flex justify-start mt-1">
-                    <button
-                      onClick={() => toggleFavorite(i)}
-                      className={`transition ${
-                        msg.favorite
-                          ? "text-[#b6517a]"
-                          : "text-gray-400 hover:text-pink-500"
-                      }`}
-                    >
-                      <Heart
-                        size={16}
-                        fill={msg.favorite ? "#9333ea" : "none"}
-                      />
-                    </button>
-                  </div>
-                )}
               </div>
 
               {msg.sender === "user" && (

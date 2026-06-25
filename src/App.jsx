@@ -12,7 +12,7 @@ import Notes from "./pages/Notes";
 import NotesDetail from "./pages/NotesDetail";
 import Upload from "./pages/Upload";
 import AskAI from "./pages/AskAI";
-// import { Dashboard } from '/src/pages/Dashboard.jsx';
+import Dashboard from "./pages/Dashboard";
 import Privacy from "./pages/Privacy";
 import TermsConditions from "./pages/TermsConditions";
 import About from "./pages/About";
@@ -21,7 +21,7 @@ import Error404 from "./pages/Error404";
 import Subjects from "./pages/Subjects";
 import SubjectDetail from "./pages/SubjectDetail";
 import Bookmarks from "./pages/Bookmarks";
-import FavoritesPage from "./pages/FavoritesPage";
+// import FavoritesPage from "./pages/FavoritesPage";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
@@ -59,7 +59,7 @@ const AppRoutes = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-        {/* <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/notes" element={<ProtectedRoute><Notes /></ProtectedRoute>} />
         <Route path="/notes/:id" element={<ProtectedRoute><NotesDetail /></ProtectedRoute>} />
         <Route path="/upload" element={<ProtectedRoute><Upload /></ProtectedRoute>} />
@@ -71,7 +71,7 @@ const AppRoutes = () => {
         <Route path="/subjects" element={<ProtectedRoute><Subjects /></ProtectedRoute>} />
         <Route path="/subject-detail/:degree/:semester/:id" element={<SubjectDetail />} />
         <Route path="/bookmarks" element={<ProtectedRoute><Bookmarks /></ProtectedRoute>} />
-        <Route path="/favorites" element={<ProtectedRoute><FavoritesPage /></ProtectedRoute>} />
+        {/* <Route path="/favorites" element={<ProtectedRoute><FavoritesPage /></ProtectedRoute>} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Newsletter />

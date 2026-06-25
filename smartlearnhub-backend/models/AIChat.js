@@ -15,7 +15,7 @@ const aiChatSchema = new mongoose.Schema({
     required: true
   },
   image: {
-    type: String, // base64 or file path
+    type: String, 
     default: null
   },
   timestamp: {

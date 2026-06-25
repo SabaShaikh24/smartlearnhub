@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
 import express from "express";
-import User from "../models/User.js"; // You'll need a User model
+import User from "../models/User.js"; 
 import {authMiddleware} from "../middleware/auth.js";
 
 const router = express.Router();
 
 
-// GET /api/user - Get user profile data
+
 router.get("/",authMiddleware, async (req, res) => {
   try {
-    // TODO: Get user ID from authentication middleware
+    
     const userId = req.user.userId; 
     
-    const user = await User.findById(userId).select("-password"); // Exclude password
+    const user = await User.findById(userId).select("-password"); 
     if (!user) {
       return res.status(404).json({ error: "User not found" });
     }
@@ -29,13 +29,13 @@ router.get("/",authMiddleware, async (req, res) => {
   }
 });
 
-// PUT /api/user - Update user profile
+
 router.put("/", authMiddleware, async (req, res) => {
   try {
     const userId = req.user.userId;
     const { name, degree } = req.body;
 
-    // Update user
+    
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       { name, degree },

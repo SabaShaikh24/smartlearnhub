@@ -44,6 +44,10 @@ router.post("/subscribe", async (req, res) => {
       return res.status(400).json({ error: "Email is required" });
     }
 
+    if (!email.endsWith("@gmail.com")) {
+      return res.status(400).json({ error: "Only Gmail addresses are allowed" });
+    }
+
     const existingSubscriber = await Subscriber.findOne({ email });
     if (existingSubscriber) {
       return res.status(400).json({ error: "Email already subscribed" });

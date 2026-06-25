@@ -4,7 +4,7 @@ import { authMiddleware } from "../middleware/auth.js";
 
 const router = express.Router();
 
-// GET /api/bookmarks - Get user's bookmarks
+
 router.get("/", authMiddleware, async (req, res) => {
   try {
     const user = await User.findById(req.user.userId).select("bookmarks");
@@ -18,7 +18,7 @@ router.get("/", authMiddleware, async (req, res) => {
   }
 });
 
-// POST /api/bookmarks - Add or remove a bookmark
+
 router.post("/", authMiddleware, async (req, res) => {
   try {
     const { subjectId } = req.body;
@@ -32,14 +32,14 @@ router.post("/", authMiddleware, async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
 
-    // Check if already bookmarked
+    
     const isBookmarked = user.bookmarks.includes(subjectId);
     
     if (isBookmarked) {
-      // Remove bookmark
+     
       user.bookmarks = user.bookmarks.filter(id => id !== subjectId);
     } else {
-      // Add bookmark
+      
       user.bookmarks.push(subjectId);
     }
 

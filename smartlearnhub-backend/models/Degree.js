@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const degreeSchema = new Schema({
-  id: { type: Number, required: true, unique: true },   // e.g., 1, 2
-  name: { type: String, required: true },               // e.g., "B.Sc. Computer Science"
-  short: { type: String, required: true }               // e.g., "BSc CS"
+  id: { type: Number, required: true, unique: true },   
+  name: { type: String, required: true },               
+  short: { type: String, required: true }               
 });
 
 const Degree = mongoose.model('Degree', degreeSchema);

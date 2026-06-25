@@ -51,7 +51,11 @@ function Newsletter() {
           <input 
             type="email" 
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+                setEmail(e.target.value);
+                 setMessage(""); 
+                }}
+
             placeholder="Your email address" 
             className="flex-1 px-4 py-2 rounded-lg text-pink-900 bg-white border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent"
             disabled={loading}

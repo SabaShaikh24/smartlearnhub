@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const chatSessionSchema = new Schema({
-  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },  // links to User
+  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },  
   question: { type: String, required: true },
   answer: { type: String, required: true },
   timestamp: { type: Date, default: Date.now }

@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-// Add this to your routes (could be in a new file or added to existing routes)
+
 router.get('/uploaded-notes', async (req, res) => {
     try {
         const { subjectId } = req.query;
@@ -8,13 +8,13 @@ router.get('/uploaded-notes', async (req, res) => {
             return res.status(400).json({ error: 'subjectId is required' });
         }
 
-        // Get user-uploaded notes for this subject
+        
         const uploadedNotes = await Note.find({ subject: subjectId })
             .populate('user', 'name')
             .populate('subject', 'name')
             .sort({ createdAt: -1 });
 
-        // Format the notes for frontend
+      
         const formattedNotes = uploadedNotes.map(note => ({
             _id: note._id,
             title: note.title,

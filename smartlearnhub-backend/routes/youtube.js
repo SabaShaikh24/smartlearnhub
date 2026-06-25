@@ -24,7 +24,7 @@ router.get('/search', async (req, res) => {
       }
     );
 
-    // Improved filtering
+    
     const availableVideos = response.data.items.filter(item => {
       const title = item.snippet.title.toLowerCase();
       return !(

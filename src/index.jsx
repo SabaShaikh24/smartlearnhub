@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { BookmarksProvider } from "./context/BookmarksContext";
+import { BookmarksProvider } from "./Context/BookmarksContext";
 import "./index.css";
 
 // TODO: Replace with real userId from auth system
