@@ -33,12 +33,24 @@ export default function UploadPage() {
   }, [token]);
 
   const handleFileChange = (e) => {
-    const selected = e.target.files[0];
-    if (selected) {
-      setError("");
-      setFile(selected);
-    }
-  };
+  const selected = e.target.files[0];
+  if (!selected) return;
+
+  const allowedTypes = [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ];
+
+  if (!allowedTypes.includes(selected.type)) {
+    setError("Only PDF, DOC and DOCX files are allowed.");
+    e.target.value = "";
+    return;
+  }
+
+  setError("");
+  setFile(selected);
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -138,8 +150,18 @@ export default function UploadPage() {
 
           {/* File Upload */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">File(Only PDF, DOC and DOCX files are allowed) *</label>
-            <input type="file" onChange={handleFileChange} className="mt-1" />
+            <label className="block text-sm font-medium text-gray-700">
+  File *
+</label>
+<p className="text-xs text-gray-500 mt-1 mb-2">
+  Only PDF (.pdf), DOC (.doc) and DOCX (.docx) files are allowed. Max size: 20 MB.
+</p>
+            <input
+  type="file"
+  accept=".pdf,.doc,.docx"
+  onChange={handleFileChange}
+  className="mt-1"
+/>
           </div>
 
           {/* Messages */}
