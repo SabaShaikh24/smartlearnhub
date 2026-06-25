@@ -24,7 +24,7 @@ export function BookmarksProvider({ children }) {
         return;
       }
 
-      const response = await fetch('http://localhost:5000/api/bookmarks', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/bookmarks`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -54,7 +54,7 @@ export function BookmarksProvider({ children }) {
       );
       
       // Sync with backend
-      const response = await fetch('http://localhost:5000/api/bookmarks', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/bookmarks`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

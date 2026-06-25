@@ -20,7 +20,7 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/user', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -48,7 +48,7 @@ const Profile = () => {
         degree: editForm.degree
       };
       
-      const response = await fetch('http://localhost:5000/api/user', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -10,7 +10,7 @@ export default function Bookmarks() {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/subjects/all-subjects');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/subjects/all-subjects`);
         const data = await response.json();
         setSubjects(data);
       } catch (error) {
