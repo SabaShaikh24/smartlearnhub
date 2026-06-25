@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 
     // Initialize Gemini with API key from environment variable
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-   const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro"  });
+   const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash"  });
     // Generate response from Gemini
     
     let content;

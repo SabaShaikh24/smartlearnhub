@@ -138,7 +138,7 @@ export default function UploadPage() {
 
           {/* File Upload */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">File *</label>
+            <label className="block text-sm font-medium text-gray-700">File(Only PDF, DOC and DOCX files are allowed) *</label>
             <input type="file" onChange={handleFileChange} className="mt-1" />
           </div>
 
