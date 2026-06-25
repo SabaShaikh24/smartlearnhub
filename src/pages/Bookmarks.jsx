@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useBookmarks } from "../context/BookmarksContext";
+import { useBookmarks } from "../Context/BookmarksContext";
 
 export default function Bookmarks() {
   const { bookmarks, loading } = useBookmarks();

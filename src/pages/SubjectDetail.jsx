@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
-import { BookmarksContext } from "../context/BookmarksContext";
+import { BookmarksContext } from "../Context/BookmarksContext";
 import axios from "axios";
 import AskAI from "./AskAI";
 
