@@ -33,6 +33,7 @@ export default function UploadPage() {
   }, [token]);
 
   const handleFileChange = (e) => {
+    console.log("Selected:", selected.name, selected.type);
   const selected = e.target.files[0];
   if (!selected) return;
 
@@ -70,11 +71,14 @@ export default function UploadPage() {
       formData.append("title", title);
       formData.append("description", description);
       formData.append("subjectId", subjectId);
-
+      console.log(axios.defaults.baseURL);
+console.log("/api/notes/upload");
       const res = await axios.post("/api/notes/upload", formData, {
+        
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
+          
         },
       });
 
