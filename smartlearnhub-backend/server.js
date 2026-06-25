@@ -63,10 +63,14 @@ app.get("/", (req, res) => res.send("Backend is running"));
 //   });
 // }
 
-
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected ✅"))
-  .catch(err => console.log("MongoDB connection error ❌:", err));
+  .then(async () => {
+    console.log("MongoDB connected ✅");
+    console.log("Database:", mongoose.connection.name);
 
+    const collections = await mongoose.connection.db.listCollections().toArray();
+    console.log("Collections:", collections.map(c => c.name));
+  })
+  .catch(err => console.log("MongoDB connection error ❌:", err));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT} 🚀`));
